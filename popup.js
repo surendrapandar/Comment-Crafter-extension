@@ -4,16 +4,13 @@ document
     const postContent = document.getElementById("post-content").value;
     const commentType = document.getElementById("comment-type").value;
 
-    const response = await fetch(
-      "https://linkedin-comment-extension-backend.vercel.app/generate-comment",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ postContent, commentType }),
-      }
-    );
+    const response = await fetch("ServerURL", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ postContent, commentType }),
+    });
 
     const data = await response.json();
     document.getElementById("comment").value = data.comment;
