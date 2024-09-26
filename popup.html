@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment Crafter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>Comment Crafter</h1>
+
+    <label for="post-content">Enter LinkedIn post content:</label>
+    <textarea
+      id="post-content"
+      placeholder="Paste the LinkedIn post content here..."
+    ></textarea>
+
+    <label for="comment-type">Choose comment type:</label>
+    <select id="comment-type">
+      <option value="generic">Generic</option>
+      <option value="funny">Funny</option>
+      <option value="serious">Serious</option>
+      <option value="disagree">Disagree</option>
+    </select>
+
+    <textarea
+      id="comment"
+      placeholder="Generated comment will appear here..."
+    ></textarea>
+    <button id="generate-comment">Generate Comment</button>
+    <button id="copy-comment">Copy Comment</button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
